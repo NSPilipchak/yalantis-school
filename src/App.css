@@ -1,12 +1,19 @@
 .App {
-  text-align: left;
-}
-
-.Employess{
-  max-width: 70vw;
+  text-align: center;
   float: left;
 }
-.EmployessBirthday{
-  max-width: 30vw;
+
+input {
   float: right;
+}
+
+.user-list__item {
+  max-width: 170px;
+  font-size: smaller;
+  font-weight: normal;
+}
+
+.alphabet {
+  font-size: large;
+  font-weight: bold;
 }
