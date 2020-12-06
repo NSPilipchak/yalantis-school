@@ -61,11 +61,9 @@ const App = () => {
             </div>
             <div className="user-list-by--month">
                 <p>Employees birthday</p>
-                {activeUsers.length !== 0 && (
-                    <UserListByMonth
-                        users={activeUsers}
-                        months={months}/>
-                )}
+                <UserListByMonth
+                    users={activeUsers}
+                    months={months}/>
             </div>
         </div>
     );
