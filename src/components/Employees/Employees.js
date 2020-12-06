@@ -10,7 +10,8 @@ class Employess extends React.Component {
         this.state = {
             error: null,
             isLoaded: false,
-            users: []
+            users: [],
+            columns: alphabet,
         };
     }
 
@@ -46,12 +47,9 @@ class Employess extends React.Component {
             this.sortArray(users)
             return (
                 <table>
-                    <thead>
-                    {this.getColName()}
-                    </thead>
-                    {this.getColUser(users)}
+                    <TableHeader columns={this.state.columns}/>
+                    <Body users={this.state.users}/>
                 </table>
-
             );
         }
     }
@@ -66,34 +64,50 @@ class Employess extends React.Component {
             return 0
         })
     }
+}
 
-    getColName() {
-        return (<tr>
-            {alphabet.map(lit => (
-                <th key={lit}>
-                    {lit}
+const TableHeader = (props) => {
+    const {columns} = props;
+
+    return (
+        <thead>
+        <tr>
+            {columns.map((element, index) =>
+                <th key={index}>
+                    {element}
                 </th>
-            ))}
-        </tr>)
-    }
+            )}
+        </tr>
+        </thead>
+    );
+}
 
-    getColUser(users) {
-        return (
-            <tr>
-                {alphabet.map(lit => (
-                    <th>
-                        <ul>
-                            {users.map(user => {
-                                if (user.lastName.slice(0, 1) === lit) {
-                                    return <li key={user.id} id={user.id}>{user.lastName} {user.firstName}</li>;
-                                }
-                            })}
-                        </ul>
-                    </th>)
-                )}
-            </tr>
-        )
-    }
+const Body = (props) => {
+    const {users} = props;
+
+    return (
+        <tbody>
+        <tr>
+            {alphabet.map((lit, index) => (
+                <th key={index}>
+                    <ul key={lit}>
+                        {users.map(user => {
+                            if (user.lastName.slice(0, 1) === lit) {
+                                return (<li key={user.id} id={user.id}>
+                                    <div className='user'>
+                                        {user.lastName} {user.firstName}
+                                        <input type="checkbox"
+                                               id={user.id} />
+                                    </div>
+                                </li>);
+                            }
+                        })}
+                    </ul>
+                </th>)
+            )}
+        </tr>
+        </tbody>
+    );
 }
 
 export default Employess;

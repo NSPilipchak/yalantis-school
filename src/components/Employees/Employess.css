@@ -1,6 +1,15 @@
 li {
     list-style-type: none; /* Убираем маркеры */
 }
+
 ul {
     padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+}
+
+th {
+    min-width: 200px;
+    vertical-align: top;
+}
+.user{
+    text-align: left;
 }
