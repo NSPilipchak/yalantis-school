@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const UserListByMonth = ({ users = [], months }) => {
-  console.log(users);
+  localStorage.setItem("users", JSON.stringify(users));
 
   const usersByMonth = [];
   months.forEach((month, index) => {

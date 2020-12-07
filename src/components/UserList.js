@@ -1,7 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const UserList = ({ setActiveUsers, users = [] }) => {
+const UserList = ({ setActiveUsers, users = [], activeUsers }) => {
+  const [checked] = React.useState([]);
+  const check = () => {
+    users.forEach((user) => {
+      checked[user.id] = (activeUsers.filter( activUser => activUser.id === user.id).length===1)
+    });
+  }
+  check();
+
+
   if (users.length === 0) {
     return <div>---</div>;
   } else {
@@ -12,7 +21,11 @@ const UserList = ({ setActiveUsers, users = [] }) => {
             {user.lastName} {user.firstName}
             <input
               type="checkbox"
-              onChange={() => setActiveUsers(user.id)}
+              onChange={() => {
+                setActiveUsers(user.id);
+                checked[user.id] = !checked[user.id];
+              }}
+              checked={checked[user.id]}
               id={user.id}
             />
           </div>

@@ -8,7 +8,7 @@ import UserListByMonth from "./components/UserListByMonth";
 const App = () => {
   const alphabet = getAlphabet();
   const months = getMonth();
-  const [activeUsers, setActiveUsers] = useState([]);
+  const [activeUsers, setActiveUsers] = useState(JSON.parse(localStorage.getItem("users") || "[]" ));
   const [usersByAlpha, setUserByAlpha] = useState([]);
   const [rawData, setRawData] = useState([]);
 
@@ -40,7 +40,6 @@ const App = () => {
     activeUsers.find(user => user.id === id)
       ? setActiveUsers(activeUsers.filter(user => user.id !== id))
       : setActiveUsers([...activeUsers, rawData.find(user => user.id === id)]);
-    // console.log("activeUsers", activeUsers);
   };
 
   return (
@@ -52,6 +51,7 @@ const App = () => {
             <Alphabet key={index} letter={letter} />
             <UserList
               users={usersByAlpha[index]}
+              activeUsers={activeUsers}
               setActiveUsers={handleSelectUser}
             />
           </div>
