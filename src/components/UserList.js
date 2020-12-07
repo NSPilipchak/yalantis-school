@@ -10,7 +10,6 @@ const UserList = ({ setActiveUsers, users = [], activeUsers }) => {
   }
   check();
 
-
   if (users.length === 0) {
     return <div>---</div>;
   } else {
