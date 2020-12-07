@@ -1,19 +1,4 @@
-.App {
-  text-align: center;
-  float: left;
-}
-
-input {
-  float: right;
-}
-
-.user-list__item {
-  max-width: 170px;
-  font-size: smaller;
-  font-weight: normal;
-}
-
-.alphabet {
-  font-size: large;
+p{
+  font-size: 18px;
   font-weight: bold;
 }

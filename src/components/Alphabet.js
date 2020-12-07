@@ -1,7 +1,7 @@
 import React from "react";
 
 const Alphabet = ({ letter }) => {
-  return <div className={`letter ${letter}`}>{letter}</div>;
+  return <p className={`letter ${letter}`}>{letter}</p>;
 };
 
 export default Alphabet;
