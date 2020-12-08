@@ -35,7 +35,7 @@ const Emploees = () => {
   };
 
   return (
-    <div className="main">
+    <section className="main">
       <div className="alphabet">
         <p>Employees</p>
         <div className="column_user_list">
@@ -52,10 +52,10 @@ const Emploees = () => {
         </div>
       </div>
       <div className="user-list-by--month">
-        <p>Employees birthday</p><hr/>
+        <p>Employees birthday</p>
         <UserListByMonth users={activeUsers} />
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,3 +1,4 @@
+import "./UserListByMonth.css"
 import React from "react";
 import PropTypes from "prop-types";
 import {stringInfoUser, userByMonths} from "../helpers/Helpers";
@@ -12,7 +13,8 @@ const UserListByMonth = ({ users = [] }) => {
   return users.length === 0 ? (
     <div>No selected employees</div>
   ) : (
-    <div className="user-list-by-month__list">
+    <div className="user-list-by-month__list vLine">
+    <hr/>
       {months.map((month, index) => {
         return (
           usersByMonth[index].length > 0 && (

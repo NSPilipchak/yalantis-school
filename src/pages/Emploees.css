@@ -1,17 +1,13 @@
-.main{
+section{
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 1.5fr 0.5fr;
-    grid-gap: 4vw;
+    grid-template-columns: 0.7fr 0.3fr;
+    grid-gap: 2vw;
 }
 .column_user_list{
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: repeat(auto-fill, minmax(130px, 0.8fr));
-
-    grid-gap: 3vw;
-}
-
-.user-list-by--month{
-
+    grid-gap: 2vw;
+    padding-left: 5px;
 }
