@@ -2,7 +2,7 @@ import "./UserListByMonth.css"
 import React from "react";
 import PropTypes from "prop-types";
 import {stringInfoUser, userByMonths} from "../helpers/Helpers";
-import {getMonth} from "../service/Api";
+import {getMonth} from "../service/Const";
 
 const UserListByMonth = ({ users = [] }) => {
   localStorage.setItem("users", JSON.stringify(users));
