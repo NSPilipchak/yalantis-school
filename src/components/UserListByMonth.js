@@ -1,8 +1,8 @@
-import "./UserListByMonth.css"
+import "./UserListByMonth.css";
 import React from "react";
 import PropTypes from "prop-types";
-import {stringInfoUser, userByMonths} from "../helpers/Helpers";
-import {getMonth} from "../service/Const";
+import { stringInfoUser, userByMonths } from "../helpers/Helpers";
+import { getMonth } from "../service/Const";
 
 const UserListByMonth = ({ users = [] }) => {
   localStorage.setItem("users", JSON.stringify(users));
@@ -14,7 +14,7 @@ const UserListByMonth = ({ users = [] }) => {
     <div>No selected employees</div>
   ) : (
     <div className="user-list-by-month__list vLine">
-    <hr/>
+      <hr />
       {months.map((month, index) => {
         return (
           usersByMonth[index].length > 0 && (

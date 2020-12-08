@@ -6,8 +6,8 @@ import Emploees from "./pages/Emploees";
 const App = () => (
   <div>
     <Switch>
-      <Route exact path='/' component={IndexPage} />
-      <Route path='/employees' component={Emploees} />
+      <Route exact path="/" component={IndexPage} />
+      <Route path="/employees" component={Emploees} />
     </Switch>
   </div>
 );
@@ -15,7 +15,7 @@ const App = () => (
 const IndexPage = () => {
   return (
     <h3>
-      Let's go to <Link to='/employees'>Emploees</Link>
+      Let's go to <Link to="/employees">Emploees</Link>
     </h3>
   );
 };
