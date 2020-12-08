@@ -1,20 +1,22 @@
 import "./App.css";
 import React from "react";
-import { Link, BrowserRouter as Router, Route } from 'react-router-dom';
+import { Link, Route, Switch } from "react-router-dom";
 import Emploees from "./pages/Emploees";
 
-const App = () => {
-  return (
-        <Router>
-            <Route exact path="/" component={IndexPage} />
-            <Route exact path="/employees" component={Emploees} />
-        </Router>
-  );
-};
+const App = () => (
+  <div>
+    <Switch>
+      <Route exact path='/' component={IndexPage} />
+      <Route path='/employees' component={Emploees} />
+    </Switch>
+  </div>
+);
 
 const IndexPage = () => {
   return (
-      <h3>Let's go to <Link to="/employees">Emploees</Link></h3>
+    <h3>
+      Let's go to <Link to='/employees'>Emploees</Link>
+    </h3>
   );
 };
 
