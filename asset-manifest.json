@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/yalantis-school/static/css/main.03e14128.chunk.css",
-    "main.js": "/yalantis-school/static/js/main.9eab8fb0.chunk.js",
-    "main.js.map": "/yalantis-school/static/js/main.9eab8fb0.chunk.js.map",
+    "main.js": "/yalantis-school/static/js/main.f8c504cf.chunk.js",
+    "main.js.map": "/yalantis-school/static/js/main.f8c504cf.chunk.js.map",
     "runtime-main.js": "/yalantis-school/static/js/runtime-main.862b4d07.js",
     "runtime-main.js.map": "/yalantis-school/static/js/runtime-main.862b4d07.js.map",
-    "static/js/2.a34b05fa.chunk.js": "/yalantis-school/static/js/2.a34b05fa.chunk.js",
-    "static/js/2.a34b05fa.chunk.js.map": "/yalantis-school/static/js/2.a34b05fa.chunk.js.map",
+    "static/js/2.f73c32b9.chunk.js": "/yalantis-school/static/js/2.f73c32b9.chunk.js",
+    "static/js/2.f73c32b9.chunk.js.map": "/yalantis-school/static/js/2.f73c32b9.chunk.js.map",
     "index.html": "/yalantis-school/index.html",
     "static/css/main.03e14128.chunk.css.map": "/yalantis-school/static/css/main.03e14128.chunk.css.map",
-    "static/js/2.a34b05fa.chunk.js.LICENSE.txt": "/yalantis-school/static/js/2.a34b05fa.chunk.js.LICENSE.txt"
+    "static/js/2.f73c32b9.chunk.js.LICENSE.txt": "/yalantis-school/static/js/2.f73c32b9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.862b4d07.js",
-    "static/js/2.a34b05fa.chunk.js",
+    "static/js/2.f73c32b9.chunk.js",
     "static/css/main.03e14128.chunk.css",
-    "static/js/main.9eab8fb0.chunk.js"
+    "static/js/main.f8c504cf.chunk.js"
   ]
 }
