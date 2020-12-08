@@ -1,4 +1,4 @@
-import { getMonth } from "../service/Api";
+import { getAlphabet, getMonth } from "../service/Const";
 
 const months = getMonth();
 
@@ -11,6 +11,15 @@ export function sortArray(users) {
     return 0;
   });
   return users;
+}
+
+export function userByAlpha(data, usersByAlpha, setUserByAlpha) {
+  getAlphabet().forEach((letter, index) => {
+    usersByAlpha[index] = sortArray(
+      data.filter(user => user.lastName.toUpperCase().startsWith(letter))
+    );
+  });
+  setUserByAlpha([...usersByAlpha]);
 }
 
 export function userByMonths(users) {
